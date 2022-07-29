@@ -1,0 +1,13 @@
+.btn {
+    display: inline-block;
+    border: $border-main;
+    padding: 3px 65px;
+    margin-top: 50px;
+}
+
+.btn-main {
+    background-color: $color-bg-main-light;
+    &:hover  {
+        background-color: transparent;
+    }
+}

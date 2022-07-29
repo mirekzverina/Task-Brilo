@@ -1,0 +1,178 @@
+// import partials
+@import 'config';
+@import 'utilities';
+@import 'buttons';
+
+
+
+
+// (0) Header
+#header {
+    background-color: $color-bg-main-dark;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 20;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-wrapper {
+    max-width: 40px;
+    display: flex;
+    align-items: center;
+}
+.nav-list {
+    display: flex;
+
+    li {
+        padding: 20px;
+
+        &:hover {
+            background-color: $color-bg-main-light;
+        }
+
+        a {
+            font-weight: 100;
+            letter-spacing: .1rem;            
+        }
+    }
+}
+.hamburger {
+    height: 60px;
+    width: 60px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: transparent;
+        transform: scale(.9);
+    }
+}
+.img-logo {
+    transition: all .5s ease-in;
+    &:hover {
+        transform: rotate(35deg);
+    }
+}
+// (0) End of header
+
+
+
+// (1) About Section
+#about {
+    margin: 170px 0;
+    scroll-margin-top: 100px;
+}
+.about-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+        flex-basis: 50%;
+
+        p {
+            line-height: 1.3rem;
+        }
+    }
+    .right {
+        flex-basis: 30%;
+    }
+}
+// (1) End of about Section
+
+
+
+// (2) Work Section
+#work {
+    margin-bottom: 170px;
+    scroll-margin-top: 100px;
+}
+.work-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project {
+    flex-basis: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    a {
+        text-transform: unset;
+    }
+
+    &:hover {
+        .top::before {
+            // background-color: transparent;
+            opacity: 0;
+        }
+    }
+    .top {
+        max-height: 200px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        img {
+            max-height: 200px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.4);
+            left: 0; top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transition: all .2s ease-in;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            border: $border-main;
+            left: 20px;
+            right: 20px;
+            top: 10px;
+            bottom: 10px;
+        }        
+    }
+    .down {
+        background-color: $color-bg-main-light;
+        padding: 15px;
+        border-radius: 0 0 0 20px;
+
+        p {
+            margin-bottom: 10px;
+            font-weight: 300;
+            font-size: .9rem;
+        }
+    }
+}
+// (2) End of work Section
+
+
+
+// (3) Footer
+#footer {
+    text-align: center;
+    padding: 40px;
+}
+// (3) End of footer
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'responsive';
